@@ -20,17 +20,16 @@ This view can be changed by pressing the numeric 1 key, which adds more detail r
 Alternatively, you can use the following command to get the running process and blocking process. 
 It should be the same as the load average.
 
-```
+```sh
 ps -eo s,user,cmd | grep ^[RD] |wc -l
 ```
 
 Additionally, you can run the following command to list the current number of threads in these states including the process/program name too:
 
+```sh
 ps -eo s,user,cmd | grep ^[RD] | sort | uniq -c | sort -nbr | head -20
+```
 
 Depending on the reason/process which causes a high level workload of the CPU you can kill pending processes, restart product, or add more CPU/cores.
 
-
-For the reference, the following article provides some facinating insights on the origination of this issue:
-
-https://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html
+For the reference, the [following article](https://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html) provides some facinating insights on the origination of this issue.
