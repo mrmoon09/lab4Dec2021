@@ -1,0 +1,15 @@
+Description
+
+LoadAverage15m message means that the CPU load average as reported by the OS over the last 15 minutes.
+In a simple language you might have a performance problem (it depends).
+
+The average load means that in a unit time, the system is inRunnable stateandUninterruptible stateAverage number of processes, 
+abbreviated asAverage number of active processe. It is not directly related to CPU utilization (that what "depends" means).
+
+Where to start.
+
+If the CLI is available you can run the top utility.
+
+The top utility gives you a real-time look at what’s going on with the server. By default, when top starts, it shows activity for all CPUs
+
+
